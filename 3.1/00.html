@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+
+<body>
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果:</p>
+    <script>
+       document.getElementById("add-btn").addEventListener("click",func1);
+       document.getElementById("minus-btn").addEventListener("click",func2);
+       document.getElementById("times-btn").addEventListener("click",func3);
+       document.getElementById("divide-btn").addEventListener("click",func4);
+       function func1(){
+            var sum=Number(document.getElementById("first-number").value);
+            var num=Number(document.getElementById("second-number").value);
+            document.getElementById("result").innerHTML=sum+num;
+       }
+       function func2(){
+            var sum="";
+            var num="";
+            sum=document.getElementById("first-number").value;
+            num=document.getElementById("second-number").value
+            document.getElementById("result").innerHTML=sum-num;
+       }
+       function func3(){
+            var sum=0;
+            var num=0;
+            sum=document.getElementById("first-number").value;
+            num=document.getElementById("second-number").value
+            document.getElementById("result").innerHTML=sum*num;
+       }
+       function func4(){
+            var sum=0;
+            var num=0;
+            sum=document.getElementById("first-number").value;
+            num=document.getElementById("second-number").value
+            document.getElementById("result").innerHTML=sum/num;
+       }
+
+
+    </script>
+</body>
+
+</html>
