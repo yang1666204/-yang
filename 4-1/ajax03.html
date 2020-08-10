@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <script>
+        window.onload = function(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var move = document.querySelector("#password")
+            move.onblur = function(){
+            var xhr = null;
+            if(window.XMLHttpRequest){
+                xhr = new XMLHttpRequest();
+            }else{
+                xhr = ActiveXObject("Microsoft.XMLHTTP")
+            }
+            xhr.open("post","http://182.254.170.158:7001/api/register",true);
+            xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+            xhr.send("username="+username+"&password="+password);
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    var result = xhr.responseText;
+                    var pp = document.querySelector("#pp");
+                    result = JSON.parse(result);
+                    console.log(result);
+                    console.log(result.code);
+                    if(result.code = 1){
+                        pp.innerText = result.msg;
+                    }else if(result.code = 0){
+                        pp.innerText = result.msg;
+                    }
+                }
+            }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="http://182.254.170.158:7001/api/register" method="POST">
+        账号<input type="text" id="username">
+        密码<input type="text" id="password">
+        <p id="pp"></p>
+        <input type="submit" value="注册">
+    </form>
+</body>
+</html>
