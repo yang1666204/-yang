@@ -1,0 +1,33 @@
+h2{
+    text-align: center;
+}
+.beiwanglu{
+    height: 600px;
+    width: 300px;
+    display: flex;
+    margin: 50px auto;
+    border: 1px solid black;
+    flex-direction: column;
+}
+.title{
+    flex-grow: 1;
+}
+.content{
+    flex-grow: 4;
+}
+#content{
+    height: 80%;
+    width: 80%;
+}
+#submit{
+    background-color: rgb(42, 187, 42);
+    border-radius: 4px;
+}
+#btn{
+    background-color: red;
+    border-radius: 4px;
+}
+.container{
+    flex-grow: 7;
+    border: 1px solid black;
+}

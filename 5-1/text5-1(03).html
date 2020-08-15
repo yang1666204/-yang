@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="5-1.css">
+    <title>备忘录</title>
+</head>
+
+<body>
+    <div class="beiwanglu">
+        <div class="title">
+            <h2>备忘录</h2>
+            <span id="nowtime"></span>
+            <hr>
+            标题<input type="text" id="title">
+        </div>
+        <div class="content">
+            <textarea name="content" id="content" placeholder="写点什么吧..."></textarea>
+            <button id="submit">保存</button>
+        </div>
+        <div class="container">
+            <ul id="ul">
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("nowtime").innerText = gettime();
+    function gettime() {
+        var now = new Date()
+        var arr = ['日', '一', '二', '三', '四', '五', '六']
+
+        return now.toLocaleDateString()
+            + '星期'
+            + arr[now.getDay()]
+    }
+    var objec = {
+        deta: Array,
+        content_li: "",
+        btn_li: "",
+        time: gettime(),
+        add: function () {
+            var li = document.createElement("li");
+            var btn = document.createElement("button");
+            btn.innerHTML = "删除";
+            var spanone = document.createElement("span");
+            var spantwo = document.createElement("span");
+            var content = document.getElementById("ul").appendChild(li).appendChild(spanone);
+            var delbtn = document.getElementById("ul").appendChild(li).appendChild(spantwo).appendChild(btn);
+            var value = this.content_li + this.time;
+            var i = 0;
+            this.deta[i] = value;
+            content.innerHTML = objec.deta[i];
+            console.log(li);
+            btn.setAttribute("id", "btn");
+            document.getElementById("btn").onclick = function () {
+                var ul = document.getElementById("ul");
+                //objec.deta.splice()?
+            }
+            i++;
+        },
+    }
+    window.onload = function () {
+        
+        document.getElementById("submit").addEventListener("click", func);
+        function func() {
+            var titleValue = document.getElementById("title").value;
+            var contentValue = document.getElementById("content").value;
+            objec.content_li = titleValue + ":" + contentValue;
+            var item = objec.add();
+        }
+    }
+</script>
+
+</html>
