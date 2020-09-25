@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/form/form_demo",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#40E0D0",
+    "navigationBarTitleText": "每日打卡",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

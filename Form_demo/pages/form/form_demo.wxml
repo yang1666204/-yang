@@ -1,0 +1,46 @@
+<view class="content_pic">
+    <image class="pic" style="width:100vw" mode="widthFix" src="../../picture/we重邮_01.png"></image>
+</view>
+<view class="content_btn">
+    <button class="btn" style="width:27vw">
+        <text class="t1">填报说明</text>
+    </button>
+    <text class="time">截止时间:{{time}}</text>
+</view>
+<form class="container_form">
+    <view class="num">
+        <text>学号</text>
+        <text>2019213815</text>
+    </view>
+    <view class="divLine"></view>
+    <view class="name">
+        <text>姓名</text>
+        <text>李洋</text>
+    </view>
+    <view class="divLine"></view>
+    <view class="input_content">
+        <text class="t2">联系电话*</text>
+        <input class="input" value=""></input>
+    </view>
+    <view class="divLine"></view>
+    <view class="site">
+        <text class="t3">目前居住地*</text>
+        <picker class="pic" mode="region" value="重庆" bindchange="handleSite">{{site}}</picker>
+    </view>
+    <view class="divLine"></view>
+    <view wx:for="{{leftContent}}" wx:key="pic_id" class="list" wx:for-index="idx">
+        <picker class="pic_one" mode="selector" data-current="{{idx}}" range="{{item.pic_content}}" bindchange="handlePic" value="{{item.index}}">
+            <text class="t4">{{item.content}}</text>
+            <text class="t5 ">{{item.pic_content[item.index]}}</text>
+            <!-- {{isBoolean?'t5_red':'t5'}} -->
+        </picker>
+        <view class="divLine"></view>
+    </view>
+    <view class="beizhu">
+        <text class="t6">备注</text>
+        <input class="otherInput" type="text" value="" placeholder="填写其他需要说明的情况"></input>
+    </view>
+    <view class="divLine"></view>
+    <button class="foot_btn" style=" width: 35vw height:100rpx" >打卡</button>
+    <button class="history_btn"  style=" width: 35vw">历史填报</button>
+</form>

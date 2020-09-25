@@ -1,0 +1,123 @@
+.content_btn{
+    display: flex;
+    
+}
+.pic{
+    width: 300rpx;
+    margin: 0px;
+    /* position: relative;
+    left:-70rpx */
+}
+.content_pic{
+    margin-left: -70rpx;
+    margin-top: -38rpx;
+}
+.btn{
+    background-color: rgb(144, 231, 223);
+    color: white;
+    height: 50rpx;
+    font-size: 30rpx;
+    font-weight: 100;
+    border-radius: 30px;
+    position: relative;
+    left: -40rpx;
+    margin-top: auto;
+    padding: 0rpx;
+}
+.btn::after{
+    border: none;
+}
+.time{
+    color: darkgrey;
+    margin-right: 40rpx;
+    font-size: 30rpx;
+}
+.t{
+    position: relative;
+    top: 5rpx;
+}
+.name,.num{
+    display: flex;
+    justify-content: space-between;
+    font-size:35rpx;
+    font-weight:600;
+    color: rgb(100, 99, 99);
+    margin: 20rpx 70rpx;
+    margin-bottom: 10rpx;
+}
+.divLine{
+    background: #E0E3DA;
+    width: 83vw;
+    height: 2rpx;
+    margin-left: 55rpx;
+   }
+.t2,.t3,.pic,.t4,.t6,.pic_one{
+    font-size:35rpx;
+    font-weight:700;
+    color: rgb(100, 99, 99);
+    margin: 20rpx 70rpx;
+    margin-bottom: 10rpx;
+}
+.input_content,.beizhu{
+    display: flex;
+}
+.input,.otherInput{
+    text-align: right;
+    margin-top: 20rpx;
+    width: 50vw;
+    color: gray;
+}
+.site,.list{
+    display: flex;
+}
+.list{
+    flex-wrap: wrap;
+}
+.t3{
+    margin-right:-40rpx;
+}
+.pic{
+    width: 50vw;
+    text-align: right;
+}
+/* .pic_one{
+    display: flex;
+    justify-content: space-between;
+} */
+.t4{
+    display: inline-block;
+    width: 55vw;
+    margin-left: auto;
+    /* margin-right: 100rpx; */
+    font-weight: 600;
+}
+.t5,.t5_red{
+    display: inline-block;
+    text-align: right;
+    margin-left: -40rpx;
+    width: 20vw;
+}
+.t5_red{
+    color: red;
+}
+.beizhu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.otherInput{
+    margin-right: 100rpx;
+}
+.foot_btn{
+    margin-top: 80rpx;
+    font-weight: 400;
+    color: white;
+    background-color: rgb(61, 235, 197);
+    border-radius: 15rpx;
+}
+.history_btn{
+    color: rgb(100, 99, 99);
+    font-weight: 600;
+    background-color: white;
+    margin-bottom: 60rpx;
+}
